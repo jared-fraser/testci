@@ -1,6 +1,12 @@
 machine:
   services:
     - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build -t test .
+
 test:
   override:
     - php vendor/bin/phpunit tests/
