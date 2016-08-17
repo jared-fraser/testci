@@ -1,0 +1,10 @@
+{
+    "name": "jaredfraser/testci",
+    "authors": [
+        {
+            "name": "Jared Fraser",
+            "email": "jared.fraser@gmail.com"
+        }
+    ],
+    "require": {}
+}
