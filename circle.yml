@@ -9,4 +9,4 @@ dependencies:
 
 test:
   override:
-    - docker run jaredfraser/testci php vendor/bin/phpunit tests/
+    - docker-compose exec web vendor/bin/phpunit tests

@@ -1,0 +1,7 @@
+version: '2'
+
+services:
+    web:
+        image: laradock/php-fpm:7.0--1.2
+        volumes: 
+            - .:/var/www/html
