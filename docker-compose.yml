@@ -1,7 +1,21 @@
 version: '2'
 
 services:
+    workspace:
+        build:
+            context: ./workspace
+            args:
+                - PUID=1000
+                - PGID=1000
+        tty: true
+        volumes_from:
+            - volumes_source
     web:
         image: laradock/php-fpm:7.0--1.2
         volumes: 
             - .:/var/www/html
+
+    volumes_source:
+        build: ./volumes/application
+        volumes:
+            - ./:/var/www/laravel

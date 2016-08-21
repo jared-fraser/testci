@@ -12,5 +12,6 @@ test:
   pre:
     - docker-compose pull
     - docker-compose up -d
+    - docker-compose exec workspace composer install -o
   override:
     - docker-compose exec web vendor/bin/phpunit tests
